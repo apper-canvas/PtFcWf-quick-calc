@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-sans text-surface-800 dark:text-surface-100 antialiased;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading font-semibold;
+  }
+}
+
+@layer components {
+  .calc-button {
+    @apply relative flex items-center justify-center rounded-xl text-lg font-medium transition-all duration-200 active:translate-y-1;
+  }
+  
+  .calc-button-number {
+    @apply calc-button bg-white dark:bg-surface-700 text-surface-800 dark:text-white shadow-neu-light dark:shadow-neu-dark hover:bg-surface-100 dark:hover:bg-surface-600;
+  }
+  
+  .calc-button-operation {
+    @apply calc-button bg-primary-light dark:bg-primary-dark text-white shadow-neu-light dark:shadow-neu-dark hover:bg-primary;
+  }
+  
+  .calc-button-function {
+    @apply calc-button bg-secondary-light dark:bg-secondary-dark text-white shadow-neu-light dark:shadow-neu-dark hover:bg-secondary;
+  }
+  
+  .calc-button-equals {
+    @apply calc-button bg-accent text-white shadow-neu-light dark:shadow-neu-dark hover:bg-opacity-90;
+  }
+}
+
+@layer utilities {
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .glass-effect {
+    @apply bg-white bg-opacity-20 dark:bg-surface-800 dark:bg-opacity-30 backdrop-blur-lg;
+  }
+}
